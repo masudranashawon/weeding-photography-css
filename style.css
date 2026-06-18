@@ -1,0 +1,80 @@
+:root {
+  --bg-color: #ffffff;
+  --text-main: #1a1a1a;
+  --text-muted: #555555;
+  --accent: #bda588;
+  --heading-font: "Playfair Display", serif;
+  --para-font: "Plus Jakarta Sans", sans-serif;
+}
+
+
+/* GLOBAL CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-main);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--para-font);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+.logo {
+  font-family: var(--heading-font);
+}
+
+header{
+    border-bottom: 0.02rem solid rgb(85, 85, 85, 0.1);
+    padding: 1.5rem;
+}
+
+/* LOCAL CSS */
+.header-wrapper {
+    display: flex;
+    
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+.logo {
+    color: var(--text-main);
+    font-size: 2.2rem;
+}
+
+.logo span {
+    color: var(--accent);
+    font-style: italic;
+}
+
+/* nav */
+nav ul{
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a{
+    color: var(--text-muted);
+    transition: all 0.3s;
+}
+
+nav ul li a:hover{
+    color: var(--accent);
+}
+
