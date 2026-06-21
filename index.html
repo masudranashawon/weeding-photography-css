@@ -80,7 +80,8 @@
                 <div class="about-content">
                     <h5>Aura Wedding</h5>
                     <h2>Meet Your Photographer</h2>
-                    <p>A Vision for Timeless Moments. With over 15 years of experience capturing love stories across the world's most beautiful
+                    <p>A Vision for Timeless Moments. With over 15 years of experience capturing love stories across the
+                        world's most beautiful
                         locations, I believe in an approach that blends artistry and emotion. My goal is to capture the
                         unique magic of your day, not just the events.</p>
                     <p class="experience">
@@ -94,7 +95,19 @@
         </div>
     </section>
 
-    <script></script>
+    <footer>
+        <p> &copy; <span id="year"></span> Aura Weddings. All rights reserved. Crafted for visual aesthetics.</p>
+    </footer>
+
+    <script>
+        "use strict";
+
+        let currentYear = new Date().getFullYear();
+
+        let year = document.getElementById("year");
+
+        year.innerText = currentYear;
+    </script>
 </body>
 
 </html>

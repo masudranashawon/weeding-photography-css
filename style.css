@@ -220,3 +220,10 @@ nav ul li a:hover {
 .about .about-content .experience span:first-child {
   color: var(--accent);
 }
+
+footer {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 2.5rem 0;
+  font-size: 0.85rem;
+}
