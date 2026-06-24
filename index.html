@@ -22,7 +22,14 @@
                     <h5>Aura<span>Weddings</span> </h5>
                 </div>
 
-                <nav>
+                <!-- Hamburger icon for mobile -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <nav id="nav">
                     <ul>
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#services">Services</a></li>
@@ -149,11 +156,22 @@
     <script>
         "use strict";
 
+        //Navbar Toggle in Tab
+        let hamburger = document.getElementById("hamburger");
+        let nav = document.getElementById("nav");
+
+        hamburger.onclick = function () {
+            nav.classList.toggle("active");
+        };
+
+        //Footer Dynamic Date
         let currentYear = new Date().getFullYear();
 
         let year = document.getElementById("year");
 
         year.innerText = currentYear;
+
+
     </script>
 </body>
 
