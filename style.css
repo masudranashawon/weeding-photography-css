@@ -33,6 +33,10 @@ body {
   overflow-x: hidden;
 }
 
+main {
+  padding-top: 5rem;
+}
+
 h1,
 h2,
 h3,
@@ -48,6 +52,11 @@ h3,
 header {
   border-bottom: 0.02rem solid rgb(85, 85, 85, 0.1);
   padding: 1.5rem;
+  position: fixed;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(2px);
+  z-index: 999;
 }
 
 header .hamburger {
@@ -124,7 +133,7 @@ nav ul li a:hover {
   padding-right: 15%;
 }
 
-.hero-content button {
+.hero-content a {
   background: var(--text-main);
   color: var(--bg-color);
   border: var(--text-main);
@@ -135,7 +144,7 @@ nav ul li a:hover {
   transition: var(--transition);
 }
 
-.hero-content button:hover {
+.hero-content a:hover {
   background: var(--accent);
   color: var(--bg-color);
   border: var(--accent);
@@ -203,7 +212,7 @@ nav ul li a:hover {
   font-size: 1.2rem;
 }
 
-.about .about-content button {
+.about .about-content a {
   background: var(--accent);
   color: var(--bg-color);
   border: 0;
@@ -213,7 +222,7 @@ nav ul li a:hover {
   transition: var(--transition);
 }
 
-.about .about-content button:hover {
+.about .about-content a:hover {
   background: var(--text-main);
   color: var(--bg-color);
 }
@@ -341,7 +350,7 @@ footer {
     padding-right: 5%;
   }
 
-  .hero-content button {
+  .hero-content a {
     padding: 0.8rem 1.2rem;
     font-size: 0.8rem;
     border-radius: 0.25rem;
@@ -376,7 +385,7 @@ footer {
     font-size: 1rem;
   }
 
-  .about .about-content button {
+  .about .about-content a {
     padding: 0.8rem 1.2rem;
     font-size: 0.8rem;
     border-radius: 0.25rem;
@@ -456,16 +465,21 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
+  main {
+    padding-top: 2.5rem;
+  }
+
   header {
-    position: relative;
+    position: fixed;
   }
 
   nav {
     position: absolute;
     left: 0;
-    top: 100%;
+    top: -14rem;
     width: 100%;
-    display: none;
+    display: block;
+    transition: var(--transition);
   }
 
   nav ul {
@@ -475,12 +489,11 @@ footer {
     background-color: rgba(189, 165, 136, 0.9);
     padding: 1.5rem;
     backdrop-filter: blur(2px);
-    z-index: 99;
     text-align: center;
   }
 
   nav.active {
-    display: block;
+    top: 100%;
   }
 
   nav ul li a {
